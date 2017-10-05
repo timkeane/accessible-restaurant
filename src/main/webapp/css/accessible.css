@@ -32,7 +32,7 @@ a.popup-closer:hover {
   bottom: 80px;
   z-index: 2;
 }
-#facility-list .info.even-row {
+#loading, #facility-list .info.even-row {
   background-color: rgba(18,89,167,0.1);
 }
 .cuisine {
