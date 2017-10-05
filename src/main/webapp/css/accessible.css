@@ -17,7 +17,8 @@ a.popup-closer {
 .ctl-btn.ui-btn:hover, .ctl-btn.ui-btn:visited,
 .dir-mode-btn.active-mode, .dir-mode-btn.ui-btn:hover,
 .ui-btn-icon-left:hover:after,
-a.popup-closer:hover {
+a.popup-closer:hover,
+.ctl-collapse a.ui-collapsible-heading-toggle:hover:after {
   background-color: #1259a7;
 }
 #facility-list .info .map.ui-btn {
