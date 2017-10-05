@@ -4,6 +4,7 @@ var finderDecorations = {
       .append(this.distanceHtml())
       .append(this.nameHtml())
       .append(this.addressHtml())
+      .append(this.cuisineHtml())
       .append(this.mapHtml())
       .append(this.directionsHtml());
   },
@@ -22,6 +23,11 @@ var finderDecorations = {
     var div = $('<div class="address"></div>');
     return div.append('<div>' + this.get('INPUT_1_PREMISESADDRESS') + '</div>')
       .append('<div>' + this.get('INPUT_1_PREMISESCITYSTATEZIP') + '</div>');
+  },
+  cuisineHtml: function(){
+    var div = $('<div class="cuisine"></div>');
+    return div.append('<span class="name">Cuisine: </span>')
+      .append('<span class="value">' + this.get('CUISINE') + '</span>');
   },
   mapHtml: function(){
     var a = $('<a class="map" data-role="button" onclick="nyc.finder.zoomTo(event);">Map</a>');
