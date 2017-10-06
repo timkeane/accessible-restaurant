@@ -12,15 +12,15 @@ var finderDecorations = {
     var distance = this.get('distance');
     if (!(distance === undefined)){
       var div = $('<div class="distance"></div>');
-      return div.html('&bull; ' + (distance / 5280).toFixed(2) + ' mi &bull;');
+      return div.html('&bull;<span> ' + (distance / 5280).toFixed(2) + ' mi </span>&bull;');
     }
   },
   nameHtml: function(){
-    var div = $('<div class="name"></div>');
+    var div = $('<div class="name notranslate"></div>');
     return div.html(this.get('INPUT_1_FACTSII_DBA'));
   },
   addressHtml: function(){
-    var div = $('<div class="address"></div>');
+    var div = $('<div class="address notranslate"></div>');
     return div.append('<div>' + this.get('INPUT_1_PREMISESADDRESS') + '</div>')
       .append('<div>' + this.get('INPUT_1_PREMISESCITYSTATEZIP') + '</div>');
   },
