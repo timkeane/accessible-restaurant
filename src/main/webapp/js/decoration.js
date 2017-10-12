@@ -1,4 +1,7 @@
 var finderDecorations = {
+  extendFeature: function(){
+    finderDecorations.cuisineTypes[this.get('CUISINE')] = true;
+  },
   html: function(){
     return $('<div class="info"></div>')
       .append(this.distanceHtml())
@@ -44,3 +47,5 @@ var finderDecorations = {
     return this.get('INPUT_1_FACTSII_DBA');
   }
 };
+
+finderDecorations.cuisineTypes = {};

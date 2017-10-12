@@ -73,21 +73,6 @@
 
 			var map = new nyc.ol.Basemap({target: $('#map').get(0)});
 
-			var finderSource = new nyc.ol.source.FilteringAndSorting(
-				{loader: new nyc.ol.source.CsvPointFeatureLoader({
-					url: 'data/facility.csv',
-					projection: 'EPSG:2263',
-					xCol: 'OUTPUT_X_Coordinate',
-					yCol: 'OUTPUT_Y_Coordinate'
-				})}, [finderDecorations],
-				{nativeProjection: 'EPSG:2263', projection: 'EPSG:3857'}
-			);
-
-		  map.addLayer(new ol.layer.Vector({
-		    source: finderSource,
-		    style: finderStyle
-		  }));
-
 			/* See README.md for getting your GeoClient App Id and App Key */
 			var geocoder = new nyc.Geoclient(
 				'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example'
@@ -99,13 +84,46 @@
 				locator: new nyc.ol.Locator({map: map})
 			});
 
-			new nyc.FinderApp({
-				map: map,
-				finderSource: finderSource,
-				filterControls: filterControls,
-				locationMgr: locationMgr,
-				directionsUrl: 'https://maps.googleapis.com/maps/api/js?sensor=false&libraries=visualization'
+			var finderSource = new nyc.ol.source.FilteringAndSorting(
+				{loader: new nyc.ol.source.CsvPointFeatureLoader({
+					url: 'data/facility.csv',
+					projection: 'EPSG:2263',
+					xCol: 'OUTPUT_X_Coordinate',
+					yCol: 'OUTPUT_Y_Coordinate'
+				})}, [finderDecorations],
+				{nativeProjection: 'EPSG:2263', projection: 'EPSG:3857'}
+			);
+
+			var filterControls = [];
+			finderSource.on(nyc.ol.source.Decorating.LoaderEventType.FEATURESLOADED, function(){
+				var choices = [];
+				for (var cuisine in finderDecorations.cuisineTypes){
+					choices.push({
+						name: 'CUISINE',
+						value: cuisine,
+						label: cuisine,
+						checked: false
+					});
+				}
+				filterControls.push(new nyc.Check({
+					target: '#cuisine-filter',
+					title: 'Cuisine',
+					expanded: true,
+					choices: choices
+				}));
+				new nyc.FinderApp({
+					map: map,
+					finderSource: finderSource,
+					filterControls: filterControls,
+					locationMgr: locationMgr,
+					directionsUrl: 'https://maps.googleapis.com/maps/api/js?sensor=false&libraries=visualization'
+				});
 			});
+
+		  map.addLayer(new ol.layer.Vector({
+		    source: finderSource,
+		    style: finderStyle
+		  }));
 
 			$('#facility-tab-btn a').html('Restaurants');
 			$('#filter-tab-btn a').html('Cuisine');
