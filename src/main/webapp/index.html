@@ -105,6 +105,11 @@
 						checked: false
 					});
 				}
+				choices = choices.sort(function(a, b){
+					if (a.value < b.value) return -1;
+					if (b.value < a.value) return 1;
+					return 0;
+				});
 				filterControls.push(new nyc.Check({
 					target: '#cuisine-filter',
 					title: 'Cuisine',
