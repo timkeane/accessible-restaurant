@@ -123,6 +123,9 @@
 					locationMgr: locationMgr,
 					directionsUrl: 'https://maps.googleapis.com/maps/api/js?sensor=false&libraries=visualization'
 				});
+				$('#facility-tab-btn a').html('Restaurants');
+				$('#filter-tab-btn a').html('Cuisine');
+				$('.z-srch input').attr('placeholder', 'Search for an address or ZIP Code')
 			});
 
 		  map.addLayer(new ol.layer.Vector({
@@ -130,13 +133,9 @@
 		    style: finderStyle
 		  }));
 
-			$('#facility-tab-btn a').html('Restaurants');
-			$('#filter-tab-btn a').html('Cuisine');
-			$('.z-srch input').attr('placeholder', 'Search for an address or ZIP Code')
 		});
 	</script>
 	<script src="data/cuisine.js"></script>
-	<script src="js/filter.js"></script>
 	<script src="js/decoration.js"></script>
 	<script src="js/style.js"></script>
 </body>
