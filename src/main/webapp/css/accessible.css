@@ -11,14 +11,16 @@
 .ui-btn.ui-checkbox-on:after,
 .dir-mode-btn.ui-btn,
 .ui-btn-icon-left:after,
-a.popup-closer {
+a.popup-closer,
+.pager-btns button.ui-btn:after {
   background-color: rgba(18,89,167,0.7);
 }
 .ctl-btn.ui-btn:hover, .ctl-btn.ui-btn:visited,
 .dir-mode-btn.active-mode, .dir-mode-btn.ui-btn:hover,
 .ui-btn-icon-left:hover:after,
 a.popup-closer:hover,
-.ctl-collapse a.ui-collapsible-heading-toggle:hover:after {
+.ctl-collapse a.ui-collapsible-heading-toggle:hover:after,
+.pager-btns button.ui-btn:hover:after {
   background-color: #1259a7;
 }
 #facility-list .info .map.ui-btn {
