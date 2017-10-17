@@ -20,7 +20,8 @@ var finderStyle = function(feature, resolution){
       new ol.style.Style({
         image: new ol.style.Icon({
           src: accessibleIcon,
-          scale: radius / 656
+          scale: radius / 656,
+          imgSize: [656, 656]
         })
       })
   ];
