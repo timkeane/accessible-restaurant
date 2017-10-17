@@ -41,3 +41,9 @@ a.popup-closer:hover,
 .cuisine {
   margin: 5px 0;
 }
+.ui-link.ui-btn.ui-tabs-anchor {
+  color: #1259a7;
+}
+.ui-link.ui-btn.ui-tabs-anchor.ui-btn-active {
+  color: #fff;
+}
