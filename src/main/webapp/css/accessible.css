@@ -47,3 +47,6 @@ a.popup-closer:hover,
 .ui-link.ui-btn.ui-tabs-anchor.ui-btn-active {
   color: #fff;
 }
+#cuisine-filter a.ui-collapsible-heading-toggle {
+  display: none;
+}
