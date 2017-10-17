@@ -128,10 +128,17 @@
 				$('.z-srch input').attr('placeholder', 'Search for an address or ZIP Code')
 			});
 
-		  map.addLayer(new ol.layer.Vector({
+			var finderLyr = new ol.layer.Vector({
 		    source: finderSource,
 		    style: finderStyle
-		  }));
+		  });
+		  map.addLayer(finderLyr);
+			new nyc.ol.FeatureTip(map, [{
+		    layer: finderLyr,
+		    labelFunction: function(){
+			    return {text: this.getName()};
+		    }
+		  }]);
 
 		});
 	</script>

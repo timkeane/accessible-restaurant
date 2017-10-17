@@ -20,7 +20,7 @@ var finderDecorations = {
   },
   nameHtml: function(){
     var div = $('<div class="name notranslate"></div>');
-    return div.html(this.get('INPUT_1_FACTSII_DBA'));
+    return div.html(this.getName());
   },
   addressHtml: function(){
     var div = $('<div class="address notranslate"></div>');
@@ -44,7 +44,7 @@ var finderDecorations = {
     return this.get('INPUT_1_PREMISESADDRESS') + ', ' + this.get('INPUT_1_PREMISESCITYSTATEZIP');
   },
   getName: function(){
-    return this.get('INPUT_1_FACTSII_DBA');
+    return this.get('INPUT_1_FACTSII_DBA').toUpperCase();
   }
 };
 
