@@ -9,6 +9,7 @@
   width: 37px;
   height: 31px;
   float: left;
+  background-color: transparent;
 }
 .ctl-btn.ui-btn, .ctl-btn.ui-btn:visited,
 .ui-page-theme-a .ui-btn.ui-btn-active,
