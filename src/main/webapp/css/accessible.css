@@ -54,3 +54,42 @@ a.popup-closer:hover,
 #cuisine-filter a.ui-collapsible-heading-toggle {
   display: none;
 }
+#splash {
+	display: flex;
+	align-content: center;
+	position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+#splash div.content {
+	background-color: #1259a7;
+	width: 250px;
+	max-height: calc(100% - 50px);
+	padding: 20px 20px 30px 20px;
+	border-radius: 3px;
+	margin: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#splash div.close a {
+	width: 16px;
+	height: 16px;
+	float: right;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214px%22%20height%3D%2214px%22%3E%3Cpolygon%20fill%3D%22%23FFF%22%20points%3D%2214%2C3%2011%2C0%207%2C4%203%2C0%200%2C3%204%2C7%200%2C11%203%2C14%207%2C10%2011%2C14%2014%2C11%2010%2C7%20%22%2F%3E%3C%2Fsvg%3E");
+	cursor: pointer;
+	margin: -10px;
+}
+#splash div.close {
+	display: block;
+	min-height: 10px;
+	width: auto;
+}
+#splash * {
+	font-weight: bold;
+	color: #fff;
+}
