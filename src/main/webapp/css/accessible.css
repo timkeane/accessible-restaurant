@@ -97,3 +97,9 @@ a.popup-closer:hover,
 	font-weight: bold;
 	color: #fff;
 }
+@media only screen and (max-height : 290px) {
+	#lang-btn {
+		left: 43px;
+		bottom: 40px;
+	}
+}
