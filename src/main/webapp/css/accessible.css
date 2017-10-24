@@ -70,13 +70,19 @@ a.popup-closer:hover,
 }
 #splash div.content {
 	background-color: #1259a7;
-	width: 250px;
-	max-height: calc(100% - 50px);
+	max-width: calc(100% - 100px);
+	max-height: calc(100% - 150px);
 	padding: 20px 20px 30px 20px;
 	border-radius: 3px;
 	margin: auto;
 	overflow-x: hidden;
 	overflow-y: auto;
+}
+#splash div.content ul {
+	margin-top: 5px
+}
+#splash div.content li {
+	margin-left:-20px;
 }
 #splash div.close a {
 	width: 16px;
