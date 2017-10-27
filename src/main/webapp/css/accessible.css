@@ -66,7 +66,7 @@ a.popup-closer:hover,
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1000;
+  z-index: 2000;
 }
 #splash div.content {
 	background-color: #1259a7;
@@ -78,6 +78,12 @@ a.popup-closer:hover,
 	overflow-x: hidden;
 	overflow-y: auto;
 }
+@media all and (-ms-high-contrast:none) {
+   #splash div.content {
+     height: 250px;
+     width: 320px;
+   }
+ }
 #splash div.content ul {
 	margin-top: 5px
 }
