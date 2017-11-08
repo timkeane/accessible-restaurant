@@ -48,8 +48,8 @@ task replaceTokens(dependsOn: [setEnv, copyFiles]) << {
   if (project.hasProperty("accessible-restaurant.${env}.google.url")){
     ant.replace(file: "build/${ver}/index.html", token: project.ext['accessible-restaurant.git.google.url'], value: project.ext["accessible-restaurant.${env}.google.url"])
 	}
-  if (project.hasProperty('accessible-restaurant.analytics')){
-		ant.replace(file: "build/${ver}/index.html", token: '/* google analytics */', value: project.ext['accessible-restaurant.analytics'])
+  if (project.hasProperty("accessible-restaurant.${env}.analytics")){
+		ant.replace(file: "build/${ver}/index.html", token: '<!-- google analytics -->', value: project.ext["accessible-restaurant.${env}.analytics"])
 	}
 }
 
