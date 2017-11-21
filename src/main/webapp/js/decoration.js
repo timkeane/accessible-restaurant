@@ -8,6 +8,7 @@ var finderDecorations = {
       .append(this.nameHtml())
       .append(this.addressHtml())
       .append(this.cuisineHtml())
+      .append(this.phoneHtml())
       .append(this.mapHtml())
       .append(this.directionsHtml());
   },
@@ -31,6 +32,11 @@ var finderDecorations = {
     var div = $('<div class="cuisine"></div>');
     return div.append('<span class="name">Cuisine: </span>')
       .append('<span class="value">' + this.get('CUISINE') + '</span>');
+  },
+  phoneHtml: function(){
+    var phone = this.get('PHONE');
+    return $('<a class="phone" data-role="button"></a>')
+      .html(phone).attr('href', 'tel:' + phone);
   },
   mapHtml: function(){
     var a = $('<a class="map" data-role="button" onclick="nyc.finder.zoomTo(event);">Map</a>');
