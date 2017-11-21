@@ -24,8 +24,8 @@ var finderDecorations = {
   },
   addressHtml: function(){
     var div = $('<div class="address notranslate"></div>');
-    return div.append('<div>' + this.get('INPUT_1_PREMISESADDRESS') + '</div>')
-      .append('<div>' + this.get('INPUT_1_PREMISESCITYSTATEZIP') + '</div>');
+    return div.append('<div>' + this.get('ADDRESS_1') + '</div>')
+      .append('<div>' + this.get('ADDRESS_2') + '</div>');
   },
   cuisineHtml: function(){
     var div = $('<div class="cuisine"></div>');
@@ -41,10 +41,10 @@ var finderDecorations = {
     return a.data('feature', this);
   },
   getAddress: function(){
-    return this.get('INPUT_1_PREMISESADDRESS') + ', ' + this.get('INPUT_1_PREMISESCITYSTATEZIP');
+    return this.get('ADDRESS_1') + ', ' + this.get('ADDRESS_2');
   },
   getName: function(){
-    return this.get('INPUT_1_FACTSII_DBA').toUpperCase();
+    return this.get('NAME').toUpperCase();
   }
 };
 

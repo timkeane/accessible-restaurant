@@ -48,7 +48,7 @@
 	</script>
 	<h1 class="banner">
 		<div class="icon"></div>
-		<span>v0.5.3 restaurant locator</span>
+		<span>friendly restaurant locator</span>
 	</h1>
 	<div id="map"></div>
 	<div id="splash" onclick="$(this).fadeOut();">
@@ -102,8 +102,8 @@
 				{loader: new nyc.ol.source.CsvPointFeatureLoader({
 					url: 'data/facility.csv',
 					projection: 'EPSG:2263',
-					xCol: 'OUTPUT_X_Coordinate',
-					yCol: 'OUTPUT_Y_Coordinate'
+					xCol: 'X',
+					yCol: 'Y'
 				})}, [finderDecorations],
 				{nativeProjection: 'EPSG:2263', projection: 'EPSG:3857'}
 			);
@@ -156,7 +156,6 @@
 
 		});
 	</script>
-	<script src="data/cuisine.js"></script>
 	<script src="js/decoration.js"></script>
 	<script src="js/style.js"></script>
 </body>
