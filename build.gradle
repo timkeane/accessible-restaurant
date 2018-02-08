@@ -9,9 +9,10 @@ ext{
 	appName = 'accessible-restaurant'
 	ver = 'v0.0.2-SNAPSHOT'
 
-  local_nyclib = 'https://maps.nyc.gov/nyc-lib/'
-	stg_nyclib = '../nyc-lib/'
-	prd_nyclib = '../nyc-lib/'
+  local_script = 'https://maps.nyc.gov/'
+  dev_script = '../'
+  stg_script = '../'
+  prd_script = '../'
 
 	default_env = 'local'
 }
@@ -41,7 +42,7 @@ task copyFiles(dependsOn: clean) << {
 
 task replaceTokens(dependsOn: [setEnv, copyFiles]) << {
 	ant.taskdef(name: 'replace', classname: 'org.apache.tools.ant.taskdefs.Replace')
-	ant.replace(file: "build/${ver}/index.html", token: local_nyclib, value: project.ext["${env}_nyclib"])
+	ant.replace(file: "build/${ver}/index.html", token: local_script, value: project.ext["${env}_script"])
 	if (project.hasProperty("accessible-restaurant.${env}.geoclient.url")){
 		ant.replace(file: "build/${ver}/index.html", token: project.ext['accessible-restaurant.git.geoclient.url'], value: project.ext["accessible-restaurant.${env}.geoclient.url"])
 	}
