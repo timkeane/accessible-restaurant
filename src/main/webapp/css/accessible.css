@@ -1,4 +1,4 @@
-.ui-mobile-viewport h1.banner, h1.banner span {
+.ui-mobile-viewport h1.banner, h1.banner div.title {
   background-color: #1259a7;
 }
 .banner .icon {
@@ -120,5 +120,15 @@ a.popup-closer:hover,
 	#lang-btn {
 		left: 43px;
 		bottom: 40px;
+	}
+}
+@media only screen and (max-width : 400px) {
+	.banner.directions div.title {
+		max-width: calc(100% - 180px);
+		max-height: 35px;
+		font-size: 16px;
+		line-height: 18px;
+		margin-top: -1px;
+		overflow: hidden;
 	}
 }
