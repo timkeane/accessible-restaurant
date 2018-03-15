@@ -3,25 +3,31 @@ var finderDecorations = {
     finderDecorations.cuisineTypes[this.get('CUISINE')] = true;
   },
   html: function(){
-    return $('<div class="info"></div>')
-      .append(this.distanceHtml())
+    return $('<div class="info" role="listitem"></div>')
+      .append(this.distanceHtml(true))
       .append(this.nameHtml())
+      .append(this.distanceHtml(false))
       .append(this.addressHtml())
       .append(this.cuisineHtml())
       .append(this.phoneHtml())
       .append(this.mapHtml())
       .append(this.directionsHtml());
   },
-  distanceHtml: function(){
+  distanceHtml: function(ariaHidden){
     var distance = this.get('distance');
     if (!(distance === undefined)){
       var div = $('<div class="distance"></div>');
-      return div.html('&bull;<span> ' + (distance / 5280).toFixed(2) + ' mi </span>&bull;');
+      if (ariaHidden){
+        div.attr('aria-hidden', ariaHidden);
+      }else{
+        div.addClass('screen-reader-only');
+      }
+      return div.html('&bull;<span> ' + (distance / 5280).toFixed(2) + ' miles </span>&bull;');
     }
   },
   nameHtml: function(){
-    var div = $('<div class="name notranslate"></div>');
-    return div.html(this.getName());
+    var h3 = $('<h3 class="name notranslate"></h3>');
+    return h3.html(this.getName());
   },
   addressHtml: function(){
     var div = $('<div class="address notranslate"></div>');
