@@ -2,13 +2,11 @@
   background-color: #1259a7;
 }
 .banner .icon {
-  background-size: 30px 30px;
-  background-position: 0 center;
-  background-repeat: no-repeat;
-  width: 37px;
+  width: 31px;
   height: 31px;
   float: left;
   background-color: transparent;
+  margin: 0 2px 0 -5px;
 }
 .ctl-btn.ui-btn, .ctl-btn.ui-btn:visited,
 .ui-page-theme-a .ui-btn.ui-btn-active,
