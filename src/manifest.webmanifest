@@ -1,6 +1,7 @@
 {
   "short_name": "NYC Wheelchair Accessible Restaurant Locator",
   "name": "NYC Wheelchair Accessible Restaurant Locator",
+  "description": "NYC Wheelchair Accessible Restaurant Locator",  
   "start_url": "index.html",
   "icons": [
     {
