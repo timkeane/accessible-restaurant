@@ -4747,12 +4747,13 @@ nyc-build-helper@^0.0.13:
     ssh2 "^0.6.1"
     zip-dir "^1.0.2"
 
-nyc-lib@^1.1.15:
-  version "1.1.15"
-  resolved "https://registry.yarnpkg.com/nyc-lib/-/nyc-lib-1.1.15.tgz#1bea8037b892e25f3713c2339fa62965a5837d43"
+nyc-lib@^1.1.16:
+  version "1.1.16"
+  resolved "https://registry.yarnpkg.com/nyc-lib/-/nyc-lib-1.1.16.tgz#1bc8cd0641591e28f8a8833198f411b59ee89527"
   dependencies:
     babel-polyfill "^6.26.0"
     es6-promise "^4.2.4"
+    isomorphic-fetch "^2.2.1"
     jquery "^3.3.1"
     leaflet "^1.3.1"
     ol "^4.6.5"

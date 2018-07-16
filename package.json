@@ -1,6 +1,6 @@
 {
   "name": "accessible-restaurant",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -25,9 +25,8 @@
   },
   "homepage": "https://github.com/timkeane/accessible-restaurant#readme",
   "dependencies": {
-    "isomorphic-fetch": "^2.2.1",
     "jquery": "^3.3.1",
-    "nyc-lib": "^1.1.15",
+    "nyc-lib": "^1.1.16",
     "ol": "^4.6.5",
     "proj4": "^2.4.4"
   },
