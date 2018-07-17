@@ -33,7 +33,7 @@
   "homepage": "https://github.com/timkeane/accessible-restaurant#readme",
   "dependencies": {
     "jquery": "^3.3.1",
-    "nyc-lib": "../nyc-lib/dist",
+    "nyc-lib": "^1.1.17",
     "ol": "^4.6.5",
     "proj4": "^2.4.4"
   },
@@ -44,7 +44,7 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "jest": "^23.1.0",
-    "nyc-build-helper": "^0.0.15",
+    "nyc-build-helper": "^0.0.16",
     "webpack": "^4.10.2",
     "webpack-cli": "^2.1.4"
   },
