@@ -40,7 +40,7 @@ if (directions) {
     dir: 'dist/js',
     files: ['accessible-restaurant.js'],
     rules: [{
-      search: 'https://maps.googleapis.com/maps/api/js?&channel=pka&sensor=false&libraries=visualization',
+      search: 'https://maps.googleapis.com/maps/api/js?&sensor=false&libraries=visualization',
       replace: directions
     }]
   })
@@ -81,7 +81,7 @@ module.exports = {
      path: path.resolve(__dirname, 'dist'),
      filename: 'js/accessible-restaurant.js'
   },
-  // devtool: (isStg || isPrd) ? false : 'cheap-module-eval-source-map',
+  devtool: (isStg || isPrd) ? false : 'cheap-module-eval-source-map',
   module: {
     rules: [{
       test: /\.js$/,
