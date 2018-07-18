@@ -44,7 +44,7 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "jest": "^23.1.0",
-    "nyc-build-helper": "^0.0.16",
+    "nyc-build-helper": "^0.0.18",
     "webpack": "^4.10.2",
     "webpack-cli": "^2.1.4"
   },
