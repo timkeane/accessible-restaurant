@@ -1,6 +1,6 @@
 {
   "name": "accessible-restaurant",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "NYC Wheelchair Friendly Restaurant Locator",
   "keywords": [
     "mapping",
@@ -33,7 +33,7 @@
   "homepage": "https://github.com/timkeane/accessible-restaurant#readme",
   "dependencies": {
     "jquery": "^3.3.1",
-    "nyc-lib": "^1.1.19",
+    "nyc-lib": "^1.1.20",
     "ol": "^4.6.5",
     "proj4": "^2.4.4"
   },
@@ -44,7 +44,7 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "jest": "^23.1.0",
-    "nyc-build-helper": "^0.0.18",
+    "nyc-build-helper": "^0.0.19",
     "webpack": "^4.10.2",
     "webpack-cli": "^2.1.4"
   },
