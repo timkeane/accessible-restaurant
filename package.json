@@ -33,7 +33,7 @@
   "homepage": "https://github.com/timkeane/accessible-restaurant#readme",
   "dependencies": {
     "jquery": "^3.3.1",
-    "nyc-lib": "^1.1.40",
+    "nyc-lib": "^1.1.66",
     "ol": "^4.6.5",
     "proj4": "^2.4.4"
   },
