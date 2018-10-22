@@ -5,8 +5,8 @@
 import $ from 'jquery'
 
 const decorations = {
-  extendFeature: function(){
-    decorations.cuisineTypes[this.get('CUISINE')] = true;
+  extendFeature() {
+    decorations.cuisineTypes[this.get('CUISINE')] = true
   },
   html() {
     return $('<div class="facility"></div>')
@@ -20,12 +20,12 @@ const decorations = {
       .append(this.mapButton())
       .append(this.directionsButton())
   }, 
-  cuisineHtml: function(){
+  cuisineHtml() {
     var div = $('<div class="cuisine"></div>')
     return div.append('<span class="name">Cuisine: </span>')
-      .append('<span class="value">' + this.get('CUISINE') + '</span>')
+      .append(`<span class="value">${this.get('CUISINE')}</span>`)
   },
-  getPhone: function(){
+  getPhone() {
     return this.get('PHONE')
   },
   getAddress1() {
@@ -34,7 +34,7 @@ const decorations = {
   getCityStateZip() {
     return this.get('ADDRESS_2')
   },
-  getName: function(){
+  getName() {
     return this.get('NAME').toUpperCase()
   },
   cuisineTypes: {}

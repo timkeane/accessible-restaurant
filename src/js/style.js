@@ -2,16 +2,16 @@
  * @module accessible-restaurant/style
  */
 
-import OlStyleStyle from 'ol/style/style' 
-import OlStyleFill from 'ol/style/fill' 
-import OlStyleStroke from 'ol/style/stroke' 
-import OlStyleCircle from 'ol/style/circle' 
+import OlStyleStyle from 'ol/style/Style' 
+import OlStyleFill from 'ol/style/Fill' 
+import OlStyleStroke from 'ol/style/Stroke' 
+import OlStyleCircle from 'ol/style/Circle' 
 import nycOl from 'nyc-lib/nyc/ol' 
 
 const style = function(feature, resolution){
-  var zoom = nycOl.TILE_GRID.getZForResolution(resolution)
+  const zoom = nycOl.TILE_GRID.getZForResolution(resolution)
   if (!style.cache[zoom]){
-    var radius = zoom * .75, stroke = 1;
+    const radius = zoom * .75
     style.cache[zoom] = new OlStyleStyle({
       image: new OlStyleCircle({
         radius: radius,
@@ -20,7 +20,7 @@ const style = function(feature, resolution){
         }),
         stroke: new OlStyleStroke({
           color: '#fff',
-          width: stroke
+          width: 1
         })
       })
     })
