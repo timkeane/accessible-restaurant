@@ -19,6 +19,9 @@ const decorations = {
       .append(this.phoneButton())
       .append(this.mapButton())
       .append(this.directionsButton())
+      .data('feature', this)
+      .mouseover($.proxy(this.handleOver, this))
+      .mouseout($.proxy(this.handleOut, this))
   }, 
   cuisineHtml() {
     var div = $('<div class="cuisine"></div>')
