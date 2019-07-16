@@ -20,7 +20,7 @@ new App({
   facilityFormat: new CsvPoint({
     x: 'X',
     y: 'Y',
-    defaultDataProjection: 'EPSG:2263'
+    dataProjection: 'EPSG:2263'
   }),
   facilityStyle: style,
   filterChoiceOptions: [],
