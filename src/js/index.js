@@ -12,7 +12,7 @@ import CsvPoint from 'nyc-lib/nyc/ol/format/CsvPoint'
 const cacheBust = nyc.cacheBust(15)
 
 new App({
-  title: '<img src="img/acc.png" alt="whellchair"> friendly restaurant locator',
+  title: '<img src="img/acc.png" alt="wheelchair"> friendly restaurant locator',
   splashOptions: {message: $('#splash-message')},
   geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example',
   facilityTabTitle: 'Restaurants',
