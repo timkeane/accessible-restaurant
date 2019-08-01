@@ -1,6 +1,6 @@
 {
   "name": "accessible-restaurant",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "NYC Wheelchair Friendly Restaurant Locator",
   "keywords": [
     "mapping",
@@ -10,7 +10,8 @@
     "accessible",
     "wheelchair",
     "restaurant",
-    "DOHMH"
+    "DOHMH",
+    "MOPD"
   ],
   "main": "index.js",
   "scripts": {
@@ -33,7 +34,7 @@
   "homepage": "https://github.com/timkeane/accessible-restaurant#readme",
   "dependencies": {
     "jquery": "^3.3.1",
-    "nyc-lib": "^1.3.45",
+    "nyc-lib": "^1.3.50",
     "ol": "^5.2.0",
     "proj4": "^2.4.4"
   },
