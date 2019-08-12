@@ -12,7 +12,7 @@ class App extends FinderApp {
     const choices = []
     cuisineTypes.forEach(cuisine => {
       choices.push({
-        name: 'CUISINE',
+        name: 'Cuisine',
         values: [cuisine],
         label: cuisine,
         checked: false
