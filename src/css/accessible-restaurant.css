@@ -14,3 +14,15 @@
   width: auto;
   margin-bottom: 3px;
 }
+@media only screen and (max-width : 490px) {
+  .fnd #banner * {
+    font-size: 3.5vw;
+    color: #fff;
+    line-height: 0.95em;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .fnd #banner>div {
+    margin-right: 90px !important;
+  }
+}
