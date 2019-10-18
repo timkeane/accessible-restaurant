@@ -14,15 +14,45 @@
   width: auto;
   margin-bottom: 3px;
 }
+/* responsive ui */
+
 @media only screen and (max-width : 490px) {
   .fnd #banner * {
-    font-size: 3.5vw;
+    font-size: 4vw;
     color: #fff;
     line-height: 0.95em;
   }
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 330px) {
   .fnd #banner>div {
     margin-right: 90px !important;
   }
+  #back-to-map {
+    width: 90px !important;
 }
+}
+@media only screen and (max-width: 360px)  and (min-width: 330px) {
+  #back-to-map {
+      width: unset;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .fnd .splash .dia {
+    width: 350px;
+    left: calc(50% - 185px);
+  }
+}
+@media only screen and (max-width: 350px) {
+  .fnd .splash .dia {
+    width: 330px;
+    left: calc(50% - 175px);
+  }
+}
+@media only screen and (max-width: 325px) {
+  .fnd .splash .dia {
+    width: 300px;
+    left: calc(50% - 160px);
+  }
+}
+
+

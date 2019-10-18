@@ -21,6 +21,14 @@ class App extends FinderApp {
     this.createFilters([{title: 'Cuisine', choices: choices}])
     $('#filters').prepend(this.filters.find('.chc'))
     this.filters.find('.clps').hide()
+    let bannerHTML = $('.fnd #banner>div')[0].innerHTML
+    this.checkBanner(bannerHTML)
+    $(window).resize(() => {
+      this.checkBanner(bannerHTML)
+    })
+  }
+  checkBanner(bannerHTML) {
+    $('.fnd #banner>div')[0].innerHTML = parseInt($('.fnd #banner>div').css('font-size')) <  16 || $(window).width() < 500 ? bannerHTML.replace('locator', '') : bannerHTML
   }
 }
 
